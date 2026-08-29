@@ -1,0 +1,218 @@
+{
+  "project_name": "ClinicaGPT",
+  "archetype": "ORGANIC & EARTHY / TACTILE MEDICAL MINIMALISM",
+  "theme": "light_first_with_clinical_clarity",
+  "language": "tr",
+  "entry_surfaces": {
+    "/": "clean ChatGPT-style central chat surface with responsive clinical sidebar, persistent privacy badge, and floating document upload dock",
+    "/timeline": "chronological health stream with expandable biomarker inspection cards and date markers",
+    "/trends": "minimal biomarker comparison matrix with longitudinal Recharts trend graphs and normal range indicators",
+    "/records": "structured health documents registry with extraction status badges, preview drawer, and privacy deletion controls",
+    "/profile": "tactile patient profile and demographic settings with explicit clinical disclaimer verification"
+  },
+  "colors": {
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#FBFBFD",
+        "on_bg": "#111827",
+        "on_bg_muted": "#64748B",
+        "roles": {
+          "border": "#E2E8F0",
+          "link": "#0F766E",
+          "error": "#BE123C",
+          "success": "#047857",
+          "warning": "#B45309"
+        }
+      },
+      {
+        "name": "sidebar",
+        "kind": "solid",
+        "bg": "#F3F4F6",
+        "on_bg": "#1E293B",
+        "on_bg_muted": "#64748B",
+        "roles": {
+          "border": "#E5E7EB",
+          "active_item": "#FFFFFF",
+          "active_text": "#0F172A",
+          "hover_item": "#EAECEF"
+        }
+      },
+      {
+        "name": "chat_user_bubble",
+        "kind": "solid",
+        "bg": "#F1F5F9",
+        "on_bg": "#0F172A",
+        "on_bg_muted": "#475569"
+      },
+      {
+        "name": "chat_assistant_bubble",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#0F172A",
+        "on_bg_muted": "#475569",
+        "roles": {
+          "border": "#E2E8F0",
+          "citation_bg": "#F8FAFC",
+          "citation_border": "#CBD5E1"
+        }
+      },
+      {
+        "name": "input_dock",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#0F172A",
+        "on_bg_muted": "#64748B",
+        "roles": {
+          "border": "#D1D5DB",
+          "focus_ring": "#0D9488",
+          "action_btn_bg": "#0F766E",
+          "action_btn_text": "#FFFFFF"
+        }
+      },
+      {
+        "name": "disclaimer_banner",
+        "kind": "solid",
+        "bg": "#FEF3C7",
+        "on_bg": "#92400E",
+        "on_bg_muted": "#B45309",
+        "roles": {
+          "border": "#FDE68A"
+        }
+      },
+      {
+        "name": "privacy_pill",
+        "kind": "solid",
+        "bg": "#ECFDF5",
+        "on_bg": "#065F46",
+        "on_bg_muted": "#047857",
+        "roles": {
+          "border": "#A7F3D0"
+        }
+      },
+      {
+        "name": "modal_panel",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#0F172A",
+        "on_bg_muted": "#64748B",
+        "roles": {
+          "border": "#E2E8F0"
+        }
+      }
+    ],
+    "accent": "#0D9488",
+    "on_accent": "#FFFFFF",
+    "accent_subtle": "#F0FDFA",
+    "neutral_dark": "#0F172A",
+    "neutral_light": "#FFFFFF"
+  },
+  "typography": {
+    "font_heading": "Outfit Variable, sans-serif",
+    "font_body": "Geist Variable, sans-serif",
+    "font_mono": "Geist Mono Variable, monospace",
+    "fontsource_imports": [
+      "@fontsource-variable/outfit",
+      "@fontsource-variable/geist",
+      "@fontsource-variable/geist-mono"
+    ],
+    "scale_px": {
+      "display": 48,
+      "h1": 36,
+      "h2": 28,
+      "h3": 20,
+      "h4": 18,
+      "body": 16,
+      "caption": 14,
+      "tiny": 12
+    },
+    "rules": {
+      "headings": "Outfit Variable with tracking-tight and font-semibold / font-medium to maintain medical authority without harshness",
+      "body": "Geist Variable text-base leading-relaxed for high readability of medical reports, lab interpretations and AI streaming chat",
+      "mono": "Geist Mono for lab numerical test values, reference intervals, units (mg/dL, mmol/L, U/L), and timestamps"
+    }
+  },
+  "visual_enhancers": {
+    "aesthetic_philosophy": "Tactile Medical Simplicity: Crisp hairline borders (1px #E2E8F0), ample white space (p-6 to p-8), strictly 1 core primary teal accent (#0D9488), no distracting colored gradients, calm status chips, and pure ChatGPT conversational intimacy.",
+    "glassmorphism": "Subtle backdrop blur for sticky navigation and top medical disclaimer bar (bg-white/85 backdrop-blur-md border-b border-slate-200/80)",
+    "shadows": "Ultra-soft clinical ambient shadows (shadow-[0_1px_3px_rgba(0,0,0,0.05),0_10px_25px_-5px_rgba(0,0,0,0.03)])",
+    "radii": "Generous rounded corners: rounded-2xl for message containers and floating input dock, rounded-xl for cards, rounded-full for action pills"
+  },
+  "layouts": {
+    "shell_structure": "ChatGPT layout paradigm: Collapsible left sidebar (w-64 or w-72) for chat sessions, health categories, and navigation shortcuts; central full-height conversational stream with fixed-width readable container (max-w-3xl mx-auto); bottom anchored floating pill input bar with direct attachment trigger; responsive slide-over drawer on mobile.",
+    "sections": {
+      "chat_stream": "Vertical scroll area with generous spacing (space-y-6), auto-scroll to bottom, streaming token typing animation, markdown table rendering for lab parameters, and structured suggestion chips (e.g., 'Son kan tahlilimi özetle', 'Kolesterol trendimi göster', 'Demir ilacı kullanım uyarısı').",
+      "input_dock": "Center-anchored max-w-3xl bottom-4 px-4 mx-auto w-full flex items-center gap-2 p-2 bg-white rounded-2xl border border-slate-200 shadow-lg focus-within:border-teal-600 transition-all",
+      "timeline_view": "Vertical chronological stream grouped by year and month. Each health event (Kan Tahlili, Radyoloji, Reçete, Epikriz) rendered with date tag, test count badge, AI key findings summary, and action to inspect structured JSON/biomarkers.",
+      "trends_view": "Selectable biomarker comparative dashboard (Glukoz, HDL, LDL, Hemoglobin, Ferritin, TSH, Kreatinin) plotting multi-date test results with normal range highlight areas and delta percentages.",
+      "records_view": "Clean document ledger table/grid with upload date, document type, structured extracted parameters count, and explicit one-click 'Yapılandırılmış Veriyi Sil' privacy action.",
+      "profile_modal": "Patient demographic essentials (Ad Soyad, Doğum Yılı, Kan Grubu, Kronik Durumlar, Bilinen Alerjiler) and prominent Medical Responsibility Disclaimer acknowledgment."
+    }
+  },
+  "motion": {
+    "streaming_cursor": "Smooth blinking vertical bar (opacity 0 to 1 with 0.8s ease-in-out)",
+    "message_entrance": "motion.div with opacity: 0, y: 10 transitioning to opacity: 1, y: 0 in 0.25s ease-out",
+    "drawer_transition": "Tailwind spring-based slide from left for mobile drawer (duration-300 ease-in-out)",
+    "tab_switch": "LayoutId animated underline indicator for navigation tabs (Sohbet / Zaman Çizelgesi / Trendler / Kayıtlar)",
+    "reduced_motion": "Wrap animations with prefers-reduced-motion check, fallback to instant opacity switch"
+  },
+  "accessibility": {
+    "contrast_standard": "Strict APCA and WCAG AA compliance: text #0F172A on #FFFFFF (15.5:1), #64748B on #FFFFFF (4.6:1), accent #0D9488 text on white for large text or with darkened #0F766E for normal text (5.1:1).",
+    "touch_targets": "Minimum 44x44px for all mobile interactive buttons (attachment button, send button, sidebar toggle, date selectors).",
+    "aria_labels": "All icon-only buttons (Paperclip attachment, Microphone, Send arrow, Sidebar toggle, Delete record) have explicit aria-label in Turkish.",
+    "focus_rings": "High-contrast focus rings (focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2)."
+  },
+  "media": {
+    "image_urls": [
+      {
+        "category": "medical_hero_avatar",
+        "description": "Clean professional medical doctor context portrait",
+        "url": "https://images.unsplash.com/photo-1638202993928-7267aad84c31?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwzfHxkb2N0b3IlMjBtZWRpY2FsJTIwY2xlYW58ZW58MHx8fHwxNzg3OTgyODA5fDA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "clinical_consultation_context",
+        "description": "Doctor in white coat holding stethoscope in minimalist clinic",
+        "url": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBtZWRpY2FsJTIwY2xlYW58ZW58MHx8fHwxNzg3OTgyODA5fDA&ixlib=rb-4.1.0&q=85"
+      }
+    ]
+  },
+  "component_paths": {
+    "chat_area": "/app/frontend/src/components/chat/ChatArea.tsx",
+    "chat_message": "/app/frontend/src/components/chat/ChatMessage.tsx",
+    "chat_input": "/app/frontend/src/components/chat/ChatInput.tsx",
+    "sidebar": "/app/frontend/src/components/layout/Sidebar.tsx",
+    "timeline": "/app/frontend/src/components/health/HealthTimeline.tsx",
+    "trends": "/app/frontend/src/components/health/BiomarkerTrends.tsx",
+    "records": "/app/frontend/src/components/health/RecordList.tsx",
+    "document_upload_modal": "/app/frontend/src/components/health/DocumentUploadModal.tsx",
+    "medical_disclaimer": "/app/frontend/src/components/common/MedicalDisclaimer.tsx",
+    "privacy_notice": "/app/frontend/src/components/common/PrivacyNotice.tsx"
+  },
+  "instructions_to_main_agent": [
+    "Adopt the clean, uncluttered ChatGPT interface structure: clean white background, high-contrast crisp text, and single teal accent #0D9488.",
+    "Implement full mock and real API endpoints for document upload (extracting blood tests, MRI, radiology, prescriptions into structured JSON parameters) and chat streaming.",
+    "Display persistent Turkish medical disclaimer: 'ClinicaGPT bir hekim veya tanı koyucu değildir. Üretilen bilgiler bilgilendirme amaçlıdır; kesin teşhis ve tedavi için lütfen hekiminize danışınız.'",
+    "Highlight privacy architecture: 'Gizlilik Taahhüdü: Yüklenen orijinal belgeler ve görseller sunucularda kalıcı olarak tutulmaz, analiz sonrası anında silinir. Yalnızca yapılandırılmış sağlık verileriniz güvenle saklanır.'",
+    "Provide interactive biomarker trend analysis with Recharts showing reference ranges (Yeşil/Normal, Kırmızı/Yüksek, Mavi/Düşük).",
+    "Use mock mockable rich health records: Kan Tahlili (Hemogram & Biyokimya 2024 & 2025), Lomber MR Raporu, E-Reçete, Kardiyoloji Kontrolü for instant out-of-the-box demonstration.",
+    "Implement Google Emergent Auth integration placeholder with session persistence and guest demo switch."
+  ],
+  "testing_attributes": {
+    "chat_input": "data-testid='chat-message-input'",
+    "chat_send_button": "data-testid='chat-send-button'",
+    "chat_upload_button": "data-testid='chat-upload-trigger'",
+    "chat_messages_container": "data-testid='chat-messages-container'",
+    "sidebar_new_chat_button": "data-testid='sidebar-new-chat-button'",
+    "nav_chat_tab": "data-testid='nav-chat-tab'",
+    "nav_timeline_tab": "data-testid='nav-timeline-tab'",
+    "nav_trends_tab": "data-testid='nav-trends-tab'",
+    "nav_records_tab": "data-testid='nav-records-tab'",
+    "nav_profile_tab": "data-testid='nav-profile-tab'",
+    "upload_dropzone": "data-testid='document-upload-dropzone'",
+    "upload_submit_button": "data-testid='document-upload-submit-button'",
+    "biomarker_selector": "data-testid='biomarker-trend-selector'",
+    "disclaimer_banner": "data-testid='medical-disclaimer-banner'",
+    "delete_record_button": "data-testid='delete-record-button'"
+  }
+}
